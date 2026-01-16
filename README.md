@@ -1,5 +1,5 @@
 # 🧠 EEG Seizure Detection using Deep Learning & Explainable AI  
-
+![Seizure Detection](seizure_detection_pipeline.png)
 📊 **Accurate** · 🔍 **Interpretable** · 💼 **Business-Ready** · 🏥 **Clinically Relevant**
 
 ---
