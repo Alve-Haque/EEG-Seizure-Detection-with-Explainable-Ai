@@ -227,6 +227,16 @@ Grad-CAM is not used because it is incompatible with pure Transformer models.
 | Integrated Gradients | 19.36 | 9.34 |
 | **Occlusion** | **18.91** | **18.96** |
 
+### CD vs E (CNN1D)
+
+| Method | Deletion ↓ | Insertion ↑ |
+|------|------------|-------------|
+| Integrated Gradients | 7.48 | 14.43 |
+| Occlusion | 1.49 | 2.52 |
+
+**Interpretation:**  
+For the CD vs E task, the faithfulness results are **mixed**, indicating that explanation quality can be task- and model-dependent.
+
 ---
 
 ## Project Outputs
