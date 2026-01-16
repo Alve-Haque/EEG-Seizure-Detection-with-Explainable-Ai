@@ -1,239 +1,204 @@
-# 🧠 EEG Seizure Detection with Deep Learning & Explainable AI
+# 🧠 EEG Seizure Detection using Deep Learning & Explainable AI  
+
+📊 Accurate · 🔍 Interpretable · 💼 Business-Ready · 🏥 Clinically Relevant
 
 ---
 
 ## 📌 Table of Contents
-1. [Project Overview](#project-overview)
-2. [Business & Clinical Value](#business--clinical-value)
-3. [Dataset](#dataset)
-4. [Tasks Studied](#tasks-studied)
-5. [End-to-End Project Pipeline](#end-to-end-project-pipeline)
-6. [Signal Processing](#signal-processing)
-7. [Deep Learning Models](#deep-learning-models)
-8. [Model Comparison](#model-comparison)
-9. [Feature Extraction & Comparison](#feature-extraction--comparison)
-10. [Explainable AI (XAI)](#explainable-ai-xai)
-11. [XAI Method Comparison](#xai-method-comparison)
-12. [Outputs](#outputs)
-13. [Key Takeaways](#key-takeaways)
-14. [Future Work](#future-work)
+1. Project Overview  
+2. Business & Clinical Value  
+3. Dataset  
+4. Problem Formulation  
+5. End-to-End Project Pipeline  
+6. Signal Processing (In Detail)  
+7. Deep Learning Models  
+8. Model Comparison  
+9. Feature Extraction & Comparison  
+10. Explainable AI (XAI)  
+11. XAI Method Comparison  
+12. Project Outputs  
+13. Key Takeaways  
+14. Future Work  
 
 ---
 
-## Project Overview
+## 🔹 Project Overview
 
-Epilepsy is a chronic neurological disorder affecting over 50 million people worldwide. EEG (Electroencephalogram) analysis is the gold standard for seizure detection, but manual inspection is time-consuming and difficult to scale.
+Epilepsy is a chronic neurological disorder affecting **50+ million people worldwide**. EEG (Electroencephalogram) analysis is the gold standard for seizure detection, yet manual inspection is time-consuming, expert-dependent, and not scalable.
 
-This project presents an **end-to-end EEG seizure detection pipeline** using **deep learning and Explainable AI (XAI)**.  
-Unlike accuracy-only approaches, this work emphasizes:
-
-- Robust signal processing
-- Deep feature extraction and comparison
-- Model selection based on representation quality
-- Faithfulness-based explainable AI
-- Clear clinical and business value
+This project presents a **complete, end-to-end EEG seizure detection system** using **deep learning and Explainable AI (XAI)**, focusing not only on accuracy but also on **feature learning, interpretability, and business value**.
 
 ---
 
-## Business & Clinical Value
+## 💼 Business & Clinical Value
 
-### 🏥 Clinical Impact
-- Automatic seizure detection assists neurologists
-- Reduces EEG review time
-- Improves response speed during seizures
+### 🏥 Clinical Value
+- Automated seizure detection to assist neurologists  
+- Reduced EEG review workload  
+- Faster medical intervention  
+- Transparent explanations for clinical trust  
 
 ### ⌚ Remote & Wearable Monitoring
-- Suitable for ICU/EMU systems
-- Can be deployed in wearable EEG devices
-- Enables continuous patient monitoring
+- ICU and Epilepsy Monitoring Units (EMU)  
+- Wearable EEG devices  
+- Long-term home monitoring  
 
-### 🧠 Trustworthy Medical AI
-- Incorporates explainable AI techniques
-- Builds clinician trust
-- Supports regulatory and ethical requirements
-
-### 💼 Business Impact
-- Reduces operational healthcare costs
-- Enables scalable AI-driven medical solutions
-- Improves adoption through interpretability
+### 💼 Business Value
+- Reduced operational healthcare costs  
+- Scalable AI-driven medical solutions  
+- Regulatory-friendly explainable AI  
+- Higher adoption through transparency  
 
 ---
 
-## Dataset
+## 📂 Dataset
 
 This project uses the **University of Bonn EEG Dataset**.
 
-### 📥 Download Link
-You can download the dataset from the official source:
+### 📥 Dataset Download
+Official source:  
+https://physionet.org/content/eegmat/1.0.0/
 
-🔗 https://physionet.org/content/eegmat/1.0.0/
-
-*(Alternatively available via multiple academic mirrors as “Bonn EEG Dataset”)*
-
-### Dataset Structure
+### 📁 Dataset Structure
+```
+Dataset/
+├── A/
+├── B/
+├── C/
+├── D/
+└── E/
+```
 
 | Set | Description |
-|---|---|
-| A | Healthy subjects (eyes open, scalp EEG) |
-| B | Healthy subjects (eyes closed, scalp EEG) |
-| C | Interictal EEG from epileptic patients |
-| D | Interictal EEG from epileptic patients (different region) |
-| E | Ictal EEG (seizure activity) |
+|----|------------|
+| A | Healthy EEG (eyes open) |
+| B | Healthy EEG (eyes closed) |
+| C | Interictal EEG (epileptic patients) |
+| D | Interictal EEG (different region) |
+| E | Ictal EEG (seizure) |
 
-**Sampling rate:** 173.61 Hz  
-**Segment length:** 4096 samples (~23.6 seconds)  
-**Channels:** Single-channel EEG  
-
----
-
-## Tasks Studied
-
-Two complementary binary classification tasks are evaluated:
-
-### Task 1 — AB vs E (Healthy vs Seizure)
-- Non-seizure: A + B
-- Seizure: E
-- Clean baseline for benchmarking
-
-### Task 2 — CD vs E (Interictal vs Ictal)
-- Non-seizure: C + D
-- Seizure: E
-- Clinically more realistic patient-specific detection
+Sampling rate: 173.61 Hz  
+Segment length: 4096 samples  
 
 ---
 
-## End-to-End Project Pipeline
+## 🧪 Problem Formulation
 
-```
-Raw EEG Files
-   ↓
-Signal Processing
-   ↓
-Leakage-Safe Train / Val / Test Split
-   ↓
-Train Deep Learning Models
-   ↓
-Model Comparison
-   ↓
-Feature Extraction & Comparison
-   ↓
-Best Model Selection
-   ↓
-Explainable AI (2 methods)
-   ↓
-XAI Faithfulness Comparison
-   ↓
-Reports & Business Insights
-```
+Two complementary classification tasks are studied:
+
+### Task 1 — AB vs E
+- Non-seizure: A + B  
+- Seizure: E  
+- Clean baseline task  
+
+### Task 2 — CD vs E
+- Non-seizure: C + D  
+- Seizure: E  
+- Clinically realistic patient-specific detection  
 
 ---
 
-## Signal Processing
+## 🔄 End-to-End Project Pipeline
 
-EEG signals are noisy and non-stationary.
-
-### Steps
-- **Bandpass filtering (0.5–40 Hz)** to retain seizure-relevant frequencies
-- **Z-score normalization per segment**
-- Optional windowing for real-time extensions
+Raw EEG → Signal Processing → Train/Val/Test Split →  
+Model Training → Model Comparison → Feature Extraction →  
+Explainable AI → XAI Comparison → Reports
 
 ---
 
-## Deep Learning Models
+## ⚙️ Signal Processing (In Detail)
 
-Three architectures are implemented:
+- **Bandpass filtering (0.5–40 Hz)**  
+  Removes noise while preserving seizure-relevant rhythms  
 
-1. **CNN1D** – learns local waveform patterns
-2. **CNN + BiLSTM** – combines spatial and temporal modeling
-3. **Transformer1D** – captures long-range dependencies via self-attention
+- **Z-score normalization per segment**  
+  Stabilizes training and removes amplitude bias  
+
+- **Optional windowing**  
+  Enables future real-time deployment  
 
 ---
 
-## Model Comparison
+## 🧠 Deep Learning Models
 
-Models are evaluated using Accuracy, F1-score, and ROC-AUC.
+### CNN1D
+- Learns local temporal patterns  
+- Efficient and robust  
+
+### CNN + BiLSTM
+- Captures temporal dependencies  
+- Higher complexity  
+
+### Transformer1D
+- Self-attention based  
+- Learns long-range EEG context  
+
+---
+
+## 📊 Model Comparison
 
 | Task | Best Model | Accuracy | F1 | AUC |
-|---|---|---:|---:|---:|
+|---|---|---|---|---|
 | AB vs E | Transformer1D | 0.983 | 0.974 | 1.000 |
 | CD vs E | CNN1D | 0.967 | 0.947 | 0.982 |
 
-**Insight:**  
-The optimal architecture depends on the clinical scenario.
+---
+
+## 🧩 Feature Extraction & Comparison
+
+- 128-dimensional embeddings  
+- Silhouette score  
+- Linear probe (logistic regression)  
+- t-SNE visualization  
+
+Transformer1D learned the most discriminative features in AB vs E.
 
 ---
 
-## Feature Extraction & Comparison
+## 🧠 Explainable AI (XAI)
 
-To understand *why* models perform well, we extract **128-dimensional embeddings** from each model.
+### Methods
+- Integrated Gradients  
+- Occlusion Attribution  
 
-### Feature Evaluation Methods
-- **Silhouette Score** – cluster separability
-- **Linear Probe** – linear separability of embeddings
-- **t-SNE** – visual cluster inspection
-
-### Key Result (AB vs E)
-Transformer1D embeddings show the highest separability and perfect linear probe performance.
+Grad-CAM is not used due to Transformer incompatibility.
 
 ---
 
-## Explainable AI (XAI)
+## 📉 XAI Method Comparison
 
-Two model-compatible XAI methods are applied to the best model per task:
-
-1. **Integrated Gradients**
-2. **Occlusion Attribution**
-
-Grad-CAM is not used due to incompatibility with pure Transformer architectures.
+### AB vs E (Transformer1D)
+- Occlusion outperformed Integrated Gradients on deletion & insertion tests  
 
 ---
 
-## XAI Method Comparison
+## 📦 Project Outputs
 
-XAI faithfulness is evaluated using:
-
-- **Deletion Test** (lower is better)
-- **Insertion Test** (higher is better)
-
-### AB vs E (Best Model: Transformer1D)
-Occlusion outperforms Integrated Gradients on both tests.
-
-### CD vs E (Best Model: CNN1D)
-Results are task-dependent, showing mixed faithfulness behavior.
+- Model checkpoints  
+- Feature reports  
+- t-SNE plots  
+- XAI reports  
+- Final comparison CSV  
 
 ---
 
-## Outputs
+## ✅ Key Takeaways
 
-Each task generates:
-- `summary.txt` – model metrics
-- `feature_report.txt` – embedding analysis
-- `tsne_*.png` – feature visualization
-- `xai_report.txt` – explanation faithfulness
-- Model checkpoints
-- Final comparison CSV
+- Signal processing is critical  
+- Best model depends on task  
+- Feature quality explains performance  
+- Faithful XAI enables trust  
 
 ---
 
-## Key Takeaways
-
-- Feature quality explains model superiority
-- Best model varies by clinical task
-- Occlusion is the most faithful XAI for Transformer-based EEG models
-- Explainability is essential for real-world adoption
-
----
-
-## Future Work
-
-- Multi-channel EEG analysis
-- Continuous seizure onset detection
-- Attention-based explanations
-- Cross-dataset validation
-- Real-time deployment
+## 🚀 Future Work
+- Multi-channel EEG  
+- Continuous seizure onset detection  
+- Attention-based explanations  
+- Real-time deployment  
 
 ---
 
-## Final Statement
+## 🏁 Final Remark
 
-> High-performing EEG seizure detection systems must integrate strong signal processing, discriminative feature learning, and faithful explainable AI to deliver real clinical and business value.
+Reliable EEG seizure detection requires **robust signal processing, strong feature learning, and faithful explainable AI** to deliver real clinical and business value.
