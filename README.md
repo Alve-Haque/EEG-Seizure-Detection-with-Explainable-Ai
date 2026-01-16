@@ -64,9 +64,8 @@ Unlike accuracy-only approaches, this work emphasizes:
 This project uses the **University of Bonn EEG Dataset**.
 
 ### 📥 Download Link
-You can download the dataset from the official source:
 
-🔗 https://physionet.org/content/eegmat/1.0.0/
+🔗 [https://physionet.org/content/eegmat/1.0.0/](https://www.kaggle.com/datasets/quands/eeg-dataset)
 
 *(Alternatively available via multiple academic mirrors as “Bonn EEG Dataset”)*
 
