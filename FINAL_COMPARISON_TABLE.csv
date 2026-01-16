@@ -1,0 +1,3 @@
+task,non_seizure_sets,seizure_sets,best_model,best_test_accuracy,best_test_f1,best_test_auc,xai_winner,IG_del_auc,IG_ins_auc,OCC_del_auc,OCC_ins_auc,out_dir
+AB_vs_E,"('A', 'B')","('E',)",Transformer1D,0.9833333333333333,0.9743589743589743,1.0,Occlusion,19.356909416487905,9.340501567954197,18.90896888623247,18.96305566765368,/content/drive/MyDrive/EEG/Outputs_Bonn_Project_Combined/AB_vs_E
+CD_vs_E,"('C', 'D')","('E',)",CNN1D,0.9666666666666667,0.9473684210526315,0.9824999999999999,Mixed,7.47588459562382,14.425310370119854,1.4936206086162365,2.5209635579617684,/content/drive/MyDrive/EEG/Outputs_Bonn_Project_Combined/CD_vs_E
