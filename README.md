@@ -4,25 +4,25 @@
 
 ---
 
-## 📌 Table of Contents
-1. Project Overview  
-2. Business & Clinical Value  
-3. Dataset  
-4. Problem Formulation  
-5. End-to-End Project Pipeline  
-6. Signal Processing (In Detail)  
-7. Deep Learning Models  
-8. Model Comparison  
-9. Feature Extraction & Comparison  
-10. Explainable AI (XAI)  
-11. XAI Method Comparison  
-12. Project Outputs  
-13. Key Takeaways  
-14. Future Work  
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Business & Clinical Value](#business--clinical-value)
+3. [Dataset](#dataset)
+4. [Problem Formulation](#problem-formulation)
+5. [End-to-End Project Pipeline](#end-to-end-project-pipeline)
+6. [Signal Processing (In Detail)](#signal-processing-in-detail)
+7. [Deep Learning Models](#deep-learning-models)
+8. [Model Comparison](#model-comparison)
+9. [Feature Extraction & Comparison](#feature-extraction--comparison)
+10. [Explainable AI (XAI)](#explainable-ai-xai)
+11. [XAI Method Comparison](#xai-method-comparison)
+12. [Project Outputs](#project-outputs)
+13. [Key Takeaways](#key-takeaways)
+14. [Future Work](#future-work)
 
 ---
 
-## 🔹 Project Overview
+## Project Overview
 
 Epilepsy is a chronic neurological disorder affecting **50+ million people worldwide**.  
 EEG (Electroencephalogram) analysis is the gold standard for seizure detection, but **manual inspection** is:
@@ -40,7 +40,7 @@ To build a **complete, explainable EEG seizure detection system** using **deep l
 
 ---
 
-## 💼 Business & Clinical Value
+## Business & Clinical Value
 
 ### 🏥 Clinical Value
 - ✅ Automated seizure detection assists neurologists  
@@ -61,25 +61,22 @@ To build a **complete, explainable EEG seizure detection system** using **deep l
 
 ---
 
-## 📂 Dataset
+## Dataset
 
 This project uses the **University of Bonn EEG Dataset**.
 
-### 📥 Dataset Download
-🔗 **Official Source:**  
-https://physionet.org/content/eegmat/1.0.0/
+### Dataset Download
+🔗 https://physionet.org/content/eegmat/1.0.0/
 
-### 📁 Dataset Structure
+### Dataset Structure
 ```
 Dataset/
-├── A/  (Healthy – Eyes Open)
-├── B/  (Healthy – Eyes Closed)
-├── C/  (Interictal – Epileptic)
-├── D/  (Interictal – Epileptic, different region)
-└── E/  (Ictal – Seizure)
+├── A/
+├── B/
+├── C/
+├── D/
+└── E/
 ```
-
-### 📊 Dataset Summary
 
 | Set | Description |
 |----|------------|
@@ -95,17 +92,15 @@ Dataset/
 
 ---
 
-## 🧪 Problem Formulation
+## Problem Formulation
 
-To ensure both **scientific rigor** and **clinical relevance**, two tasks are studied:
-
-### 🔹 Task 1 — **AB vs E (Healthy vs Seizure)**
+### Task 1 — AB vs E (Healthy vs Seizure)
 - 🟢 Non-seizure: A + B  
 - 🔴 Seizure: E  
 - ✔️ Clean baseline task  
 - ✔️ Ideal for feature learning analysis  
 
-### 🔹 Task 2 — **CD vs E (Interictal vs Ictal)**
+### Task 2 — CD vs E (Interictal vs Ictal)
 - 🟢 Non-seizure: C + D  
 - 🔴 Seizure: E  
 - ✔️ Clinically realistic  
@@ -113,7 +108,7 @@ To ensure both **scientific rigor** and **clinical relevance**, two tasks are st
 
 ---
 
-## 🔄 End-to-End Project Pipeline
+## End-to-End Project Pipeline
 
 ```
 Raw EEG Files
@@ -139,48 +134,48 @@ Final Reports, Plots & Business Insights
 
 ---
 
-## ⚙️ Signal Processing (In Detail)
+## Signal Processing (In Detail)
 
 EEG signals are **noisy, non-stationary**, and sensitive to artifacts.
 
-### 🔧 1. Bandpass Filtering
+### Bandpass Filtering
 - 🎛️ Butterworth filter  
 - 📉 Frequency range: **0.5 – 40 Hz**  
 - Removes DC drift, muscle artifacts, and high-frequency noise  
 - Preserves seizure-relevant EEG rhythms  
 
-### 🔄 2. Standardization
+### Standardization
 - 📏 Z-score normalization per segment  
 - Removes amplitude scaling issues  
 - Improves model convergence  
 
-### 🪟 3. Windowing (Optional)
+### Windowing (Optional)
 - Default: full 4096-sample segments  
 - Supports overlapping windows  
 - Enables future real-time deployment  
 
 ---
 
-## 🧠 Deep Learning Models
+## Deep Learning Models
 
-### 🔹 CNN1D
+### CNN1D
 - 🧩 Learns local temporal patterns  
 - ⚡ Computationally efficient  
 - ✔️ Strong at waveform morphology detection  
 
-### 🔹 CNN + BiLSTM
+### CNN + BiLSTM
 - 🧩 CNN extracts spatial features  
 - 🔁 BiLSTM models temporal dependencies  
 - ⚠️ Higher complexity, not always superior  
 
-### 🔹 Transformer1D
+### Transformer1D
 - 🧠 Patch-based EEG embedding  
 - 🔍 Self-attention captures long-range context  
 - ✔️ Excellent global representation learning  
 
 ---
 
-## 📊 Model Comparison
+## Model Comparison
 
 | Task | Best Model | Accuracy | F1 | AUC |
 |----|-----------|---------|----|----|
@@ -192,18 +187,18 @@ The best architecture depends on the clinical scenario.
 
 ---
 
-## 🧩 Feature Extraction & Comparison
+## Feature Extraction & Comparison
 
-### 🔍 Feature Extraction
+### Feature Extraction
 - Extract **128-dimensional embeddings**  
 - Taken from penultimate layer of each model  
 
-### 📐 Feature Evaluation Metrics
+### Feature Evaluation Metrics
 - 📊 Silhouette Score – cluster separability  
 - 🧪 Linear Probe – linear separability of embeddings  
 - 🎨 t-SNE – visual inspection  
 
-### 📈 Feature Comparison (AB vs E)
+### Feature Comparison (AB vs E)
 
 | Model | Silhouette ↑ | Linear Probe Acc ↑ | Linear Probe F1 ↑ |
 |----|--------------|-------------------|------------------|
@@ -211,13 +206,11 @@ The best architecture depends on the clinical scenario.
 | CNN + BiLSTM | 0.780 | 0.933 | 0.893 |
 | **Transformer1D** | **0.877** | **1.000** | **1.000** |
 
-✅ Transformer1D learns the most discriminative EEG features.
-
 ---
 
-## 🧠 Explainable AI (XAI)
+## Explainable AI (XAI)
 
-### 🔍 XAI Methods Used
+### XAI Methods Used
 - Integrated Gradients (IG)  
 - Occlusion Attribution  
 
@@ -225,26 +218,18 @@ Grad-CAM is not used because it is incompatible with pure Transformer models.
 
 ---
 
-## 📉 XAI Method Comparison (Faithfulness)
+## XAI Method Comparison
 
-### 🗑️ Deletion Test (↓ better)
-Remove most important regions → confidence drops faster  
-
-### ➕ Insertion Test (↑ better)
-Add important regions → confidence recovers faster  
-
-### 📊 AB vs E (Transformer1D)
+### AB vs E (Transformer1D)
 
 | Method | Deletion ↓ | Insertion ↑ |
 |------|------------|-------------|
 | Integrated Gradients | 19.36 | 9.34 |
 | **Occlusion** | **18.91** | **18.96** |
 
-🏆 Occlusion is the most faithful XAI method.
-
 ---
 
-## 📦 Project Outputs
+## Project Outputs
 
 - 📄 Model checkpoints  
 - 📄 Feature reports  
@@ -254,7 +239,7 @@ Add important regions → confidence recovers faster
 
 ---
 
-## ✅ Key Takeaways
+## Key Takeaways
 
 - ⚙️ Signal processing is critical  
 - 🧠 Best model depends on task  
@@ -263,14 +248,13 @@ Add important regions → confidence recovers faster
 
 ---
 
-## 🚀 Future Work
+## Future Work
+
 - Multi-channel EEG  
 - Continuous seizure onset detection  
 - Attention-based explanations  
 - Real-time deployment  
 
 ---
-
-## 🏁 Final Remark
 
 Reliable EEG seizure detection requires **robust signal processing, strong feature learning, and faithful explainable AI** to deliver real clinical and business value.
