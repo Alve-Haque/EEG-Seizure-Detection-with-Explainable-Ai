@@ -66,7 +66,7 @@ To build a **complete, explainable EEG seizure detection system** using **deep l
 This project uses the **University of Bonn EEG Dataset**.
 
 ### Dataset Download
-🔗 https://physionet.org/content/eegmat/1.0.0/
+🔗(https://www.kaggle.com/datasets/quands/eeg-dataset)
 
 ### Dataset Structure
 ```
