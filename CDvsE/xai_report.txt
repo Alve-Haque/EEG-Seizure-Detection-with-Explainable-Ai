@@ -1,0 +1,25 @@
+{'sample': 0, 'label': 1, 'path': '/content/drive/MyDrive/EEG/Dataset/E/S095.txt', 'IG_deletion_auc': 9.465623408057652, 'IG_insertion_auc': 19.49793265806688, 'OCC_deletion_auc': 8.60399438156523, 'OCC_insertion_auc': 11.046810939718121}
+{'sample': 1, 'label': 1, 'path': '/content/drive/MyDrive/EEG/Dataset/E/S024.txt', 'IG_deletion_auc': 9.916186422502427, 'IG_insertion_auc': 19.008495524993073, 'OCC_deletion_auc': 4.525822131249626, 'OCC_insertion_auc': 8.255534649272768}
+{'sample': 2, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/D/F084.txt', 'IG_deletion_auc': 7.936506134289516, 'IG_insertion_auc': 12.882306316403579, 'OCC_deletion_auc': 0.006366909836948764, 'OCC_insertion_auc': 0.024986434979958005}
+{'sample': 3, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/C/N049.txt', 'IG_deletion_auc': 7.889927659911166, 'IG_insertion_auc': 12.74640089017516, 'OCC_deletion_auc': 0.006084552556274048, 'OCC_insertion_auc': 0.021524524256001598}
+{'sample': 4, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/D/F068.txt', 'IG_deletion_auc': 8.916195709326672, 'IG_insertion_auc': 13.851391459351312, 'OCC_deletion_auc': 0.008359069901672456, 'OCC_insertion_auc': 0.024640728825154667}
+{'sample': 5, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/C/N064.txt', 'IG_deletion_auc': 7.831987543652005, 'IG_insertion_auc': 11.729864560185838, 'OCC_deletion_auc': 0.005220496999228885, 'OCC_insertion_auc': 0.012130448051500764}
+{'sample': 6, 'label': 1, 'path': '/content/drive/MyDrive/EEG/Dataset/E/S053.txt', 'IG_deletion_auc': 6.764111854139621, 'IG_insertion_auc': 19.34402419673456, 'OCC_deletion_auc': 5.419223847879486, 'OCC_insertion_auc': 9.03144608451641}
+{'sample': 7, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/D/F058.txt', 'IG_deletion_auc': 9.955694496036799, 'IG_insertion_auc': 14.709663761315774, 'OCC_deletion_auc': 0.033266296466287315, 'OCC_insertion_auc': 0.06834885855210615}
+{'sample': 8, 'label': 1, 'path': '/content/drive/MyDrive/EEG/Dataset/E/S038.txt', 'IG_deletion_auc': 6.163158523720725, 'IG_insertion_auc': 18.58889053808702, 'OCC_deletion_auc': 2.496489705993497, 'OCC_insertion_auc': 4.519545084420265}
+{'sample': 9, 'label': 1, 'path': '/content/drive/MyDrive/EEG/Dataset/E/S056.txt', 'IG_deletion_auc': 2.5252713901226755, 'IG_insertion_auc': 13.525606021752488, 'OCC_deletion_auc': 1.7071360123375712, 'OCC_insertion_auc': 4.866890693316073}
+{'sample': 10, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/D/F094.txt', 'IG_deletion_auc': 8.295385691070372, 'IG_insertion_auc': 16.1043125693704, 'OCC_deletion_auc': 0.08770359903027725, 'OCC_insertion_auc': 0.17377486020445332}
+{'sample': 11, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/D/F093.txt', 'IG_deletion_auc': 6.644702511923292, 'IG_insertion_auc': 11.568920989959175, 'OCC_deletion_auc': 0.000791129107980737, 'OCC_insertion_auc': 0.0028616870286626295}
+{'sample': 12, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/C/N075.txt', 'IG_deletion_auc': 8.063367613738187, 'IG_insertion_auc': 12.363311505820043, 'OCC_deletion_auc': 0.002037455084000328, 'OCC_insertion_auc': 0.009736920132930038}
+{'sample': 13, 'label': 1, 'path': '/content/drive/MyDrive/EEG/Dataset/E/S055.txt', 'IG_deletion_auc': 9.964920280799262, 'IG_insertion_auc': 18.145466417541634, 'OCC_deletion_auc': 0.8110551004483426, 'OCC_insertion_auc': 1.8604076355427495}
+{'sample': 14, 'label': 1, 'path': '/content/drive/MyDrive/EEG/Dataset/E/S069.txt', 'IG_deletion_auc': 7.526987767001536, 'IG_insertion_auc': 19.412091866603028, 'OCC_deletion_auc': 5.81854452422148, 'OCC_insertion_auc': 9.462660526387317}
+{'sample': 15, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/D/F050.txt', 'IG_deletion_auc': 6.198225342747008, 'IG_insertion_auc': 7.134291846481524, 'OCC_deletion_auc': 0.0023970983146028857, 'OCC_insertion_auc': 0.006459275554909993}
+{'sample': 16, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/C/N088.txt', 'IG_deletion_auc': 9.512415094527775, 'IG_insertion_auc': 14.92367229098631, 'OCC_deletion_auc': 0.018075713414994254, 'OCC_insertion_auc': 0.07775924953273972}
+{'sample': 17, 'label': 1, 'path': '/content/drive/MyDrive/EEG/Dataset/E/S073.txt', 'IG_deletion_auc': 6.319730666792616, 'IG_insertion_auc': 15.976667181124817, 'OCC_deletion_auc': 0.1039770427327511, 'OCC_insertion_auc': 0.2655550649486784}
+{'sample': 18, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/D/F080.txt', 'IG_deletion_auc': 9.61377175695582, 'IG_insertion_auc': 16.985717595090996, 'OCC_deletion_auc': 0.2143941584705189, 'OCC_insertion_auc': 0.6810000043912012}
+{'sample': 19, 'label': 0, 'path': '/content/drive/MyDrive/EEG/Dataset/D/F076.txt', 'IG_deletion_auc': 0.013522045161259655, 'IG_insertion_auc': 0.007179212353499054, 'OCC_deletion_auc': 0.0014729467139602548, 'OCC_insertion_auc': 0.007197489603363749}
+
+AGGREGATE
+IG_del=7.47588459562382, IG_ins=14.425310370119854
+OCC_del=1.4936206086162365, OCC_ins=2.5209635579617684
+WINNER_XAI=Mixed

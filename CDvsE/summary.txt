@@ -1,0 +1,19 @@
+CNN1D
+  ckpt: /content/drive/MyDrive/EEG/Outputs_Bonn_Project_Combined/CD_vs_E/CNN1D_best.pt
+  best_val: 1.0
+  test: {'accuracy': 0.9666666666666667, 'f1': 0.9473684210526315, 'auc': 0.9824999999999999, 'confusion_matrix': array([[40,  0],
+       [ 2, 18]])}
+
+CNN_BiLSTM
+  ckpt: /content/drive/MyDrive/EEG/Outputs_Bonn_Project_Combined/CD_vs_E/CNN_BiLSTM_best.pt
+  best_val: 0.875
+  test: {'accuracy': 0.95, 'f1': 0.918918918918919, 'auc': 0.9612499999999999, 'confusion_matrix': array([[40,  0],
+       [ 3, 17]])}
+
+Transformer1D
+  ckpt: /content/drive/MyDrive/EEG/Outputs_Bonn_Project_Combined/CD_vs_E/Transformer1D_best.pt
+  best_val: 0.9696969696969697
+  test: {'accuracy': 0.9333333333333333, 'f1': 0.8888888888888888, 'auc': 0.98375, 'confusion_matrix': array([[40,  0],
+       [ 4, 16]])}
+
+BEST: CNN1D
