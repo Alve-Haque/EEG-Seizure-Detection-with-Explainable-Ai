@@ -1,0 +1,15 @@
+CNN1D
+  emb_shape=(300, 128)
+  silhouette=0.7995028495788574
+  linear_probe={'probe_acc': 0.9888888888888889, 'probe_f1': 0.9830508474576272}
+
+CNN_BiLSTM
+  emb_shape=(300, 128)
+  silhouette=0.81369549036026
+  linear_probe={'probe_acc': 0.9555555555555556, 'probe_f1': 0.9310344827586207}
+
+Transformer1D
+  emb_shape=(300, 128)
+  silhouette=0.8821537494659424
+  linear_probe={'probe_acc': 0.9888888888888889, 'probe_f1': 0.9830508474576272}
+
